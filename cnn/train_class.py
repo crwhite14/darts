@@ -162,7 +162,7 @@ class Train:
 
       utils.save(model, os.path.join(self.save, 'weights-new.pt'))
 
-      if epoch in (45, 46, 47, 48, 49):
+      if epoch in list(range(max(0, epochs - 5), epochs)):
         valid_accs.append((epoch, valid_acc))
         test_accs.append((epoch, test_acc))
 
